@@ -5,7 +5,13 @@ A sophisticated, multi-language single-page application (SPA) built with React, 
 
 ## 🚀 Live Demo
 
-**Deployed URL:** [https://dhanasirikoppisetti.github.io/global-spa-project/]
+
+**🌐 Live demo link :** [http://localhost:3000](http://localhost:3000)
+**Deployed URL:** [https://dhanasirikoppisetti.github.io/global-spa-project/](https://dhanasirikoppisetti.github.io/global-spa-project/)
+
+## Demo Video
+
+👉 [Watch Demo Video](https://drive.google.com/file/d/1Pneb5D1cMxHP29RGOyMpjbtkX0POgxRQ/view?usp=sharing)
 
 ## ✨ Features
 
@@ -52,7 +58,6 @@ A sophisticated, multi-language single-page application (SPA) built with React, 
 git clone <https://github.com/Dhanasirikoppisetti/global-spa-project>
 cd global-spa-project
 
-text
 
 2. **Install dependencies:**
 npm install
@@ -62,50 +67,79 @@ text
 3. **Start the development server:**
 npm start
 
-text
+
 
 The app will open at [http://localhost:3000](http://localhost:3000)
 
 ## 🏗️ Project Structure
 
+```bash
 global-spa-project/
 ├── public/
 │ ├── index.html
+│ ├── favicon.ico
+│ ├── manifest.json
 │ └── locales/ # Original translation files (not used in production)
+│ ├── en/
+│ │ ├── common.json
+│ │ └── product.json
+│ ├── es/
+│ ├── ar/
+│ └── ja/
+│
 ├── src/
 │ ├── components/
-│ │ ├── Header.jsx # Navigation header with language switcher
-│ │ ├── Layout.jsx # Main layout wrapper
-│ │ └── SEOHead.jsx # Dynamic SEO meta tags
+│ │ ├── Header.js # Navigation header with language switcher
+│ │ ├── LanguageSwitcher.js # Language dropdown component
+│ │ ├── Layout.js # Main layout wrapper
+│ │ ├── ProductCard.js # Product display card
+│ │ └── SEOHead.js # Dynamic SEO meta tags
+│ │
 │ ├── hooks/
 │ │ └── useLocaleInfo.js # Custom hook for locale information
+│ │
 │ ├── locales/ # Translation files (bundled with app)
 │ │ ├── en/
-│ │ │ ├── common.json # English translations
-│ │ │ └── product.json
+│ │ │ ├── common.json # English UI translations
+│ │ │ └── product.json # English product data
 │ │ ├── es/
-│ │ │ ├── common.json # Spanish translations
+│ │ │ ├── common.json
 │ │ │ └── product.json
 │ │ ├── ar/
-│ │ │ ├── common.json # Arabic translations
+│ │ │ ├── common.json
 │ │ │ └── product.json
 │ │ └── ja/
-│ │ ├── common.json # Japanese translations
+│ │ ├── common.json
 │ │ └── product.json
+│ │
 │ ├── pages/
-│ │ ├── Home.jsx # Home page
-│ │ └── Products.jsx # Products catalog page
+│ │ ├── Home.js # Home page component
+│ │ └── Products.js # Products catalog page
+│ │
 │ ├── services/
-│ │ └── localeFormatter.js # Locale formatting utilities
+│ │ └── localeFormatter.js # Locale formatting utilities (dates, currency)
+│ │
 │ ├── App.js # Main app component with routing
+│ ├── App.css # Global app styles
 │ ├── i18n.js # i18next configuration
 │ ├── index.js # App entry point
 │ └── index.css # Global styles
-├── package.json
-└── README.md
-
-text
-
+│
+├── Screenshorts/ # Application screenshots
+│ ├── en-home.png
+│ ├── en-products.png
+│ ├── es-home.png
+│ ├── ar-home.png
+│ ├── ar-products.png
+│ ├── ja-products.png
+│ ├── mobile-eng.png
+│ └── mobile-ar.png
+│
+├── Demo_video.mp4 # Demo video
+├── package.json # Dependencies and scripts
+├── package-lock.json
+└── README.md # Project documentation
+```
 ## 🌐 Supported Languages
 
 | Language | Code | Direction | Locale |
@@ -119,10 +153,10 @@ text
 
 ### Accessing Different Languages
 
-- **English**: `http://localhost:3000/en/home`
-- **Spanish**: `http://localhost:3000/es/home`
-- **Arabic**: `http://localhost:3000/ar/home`
-- **Japanese**: `http://localhost:3000/ja/home`
+- **English**: (http://localhost:3000/en/home)
+- **Spanish**: (http://localhost:3000/es/home)
+- **Arabic**: (http://localhost:3000/ar/home)
+- **Japanese**: (http://localhost:3000/ja/home)
 
 ### Language Switcher
 
@@ -169,7 +203,7 @@ Add to package.json: "homepage": "https://dhanasirikoppisetti.github.io/global-s
 npm run build
 npm run deploy
 
-text
+
 
 ## 🔧 Configuration
 
@@ -192,7 +226,7 @@ common: newLangCommon,
 product: newLangProduct
 }
 
-text
+
 
 ### Modifying Translations
 
@@ -236,7 +270,7 @@ This project is licensed under the MIT License.
 ## 👤 Author
 
 **Your Name**
-- GitHub: [Dhanasiri](https://github.com/dhanasiri)
+- GitHub: [Dhana siri Koppisetti](https://github.com/dhanasiri)
 - Email: koppisettidhanasiri@gmail.com
 ## 🙏 Acknowledgments
 
