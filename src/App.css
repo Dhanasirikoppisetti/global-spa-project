@@ -3,12 +3,36 @@
    =========================== */
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #a7f3d0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
+}
+
+body {
   background: #f5f7fb;
 }
 
@@ -16,6 +40,11 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 /* ===========================
@@ -374,6 +403,7 @@ img {
    RESPONSIVE DESIGN
    =========================== */
 
+/* Large tablets and below */
 @media (max-width: 1024px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -390,6 +420,7 @@ img {
   }
 }
 
+/* Tablets and small devices */
 @media (max-width: 768px) {
   .bb-header {
     padding: 0.75rem 1rem;
@@ -434,8 +465,13 @@ img {
   .products-grid {
     grid-template-columns: 1fr;
   }
+
+  body {
+    font-size: 14px;
+  }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
   .bb-header {
     padding: 0.75rem 0.9rem;
@@ -482,157 +518,4 @@ img {
   .products-page {
     padding: 1.5rem 1rem;
   }
-}
-/* MOBILE RESPONSIVE FIX - HIGHEST PRIORITY */
-html body div#root {
-  width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-/* Header must stack on mobile */
-html body div#root > header,
-html body header {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding: 1rem !important;
-  gap: 0.5rem !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* Header title */
-html body header h1 {
-  font-size: clamp(1rem, 4vw, 2rem) !important;
-  margin: 0 !important;
-  flex: 0 1 auto !important;
-}
-
-/* Navigation container */
-html body header nav {
-  display: flex !important;
-  gap: 0.5rem !important;
-  flex-wrap: wrap !important;
-  flex: 0 1 auto !important;
-}
-
-html body header nav a {
-  padding: 0.5rem 0.75rem !important;
-  font-size: clamp(0.85rem, 2vw, 1rem) !important;
-  white-space: nowrap !important;
-}
-
-/* Language dropdown */
-html body header select,
-html body header combobox {
-  padding: 0.5rem !important;
-  font-size: clamp(0.85rem, 2vw, 1rem) !important;
-  min-width: auto !important;
-  max-width: 150px !important;
-  flex: 0 1 auto !important;
-}
-
-/* Main content */
-html body main {
-  padding: 1rem !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  max-width: 1400px !important;
-  margin: 0 auto !important;
-}
-
-/* Images must be responsive */
-html body img {
-  max-width: 100% !important;
-  height: auto !important;
-  display: block !important;
-}
-
-/* TABLET: 768px and below */
-@media screen and (max-width: 768px) {
-  html body header {
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
-  
-  html body header h1 {
-    text-align: center !important;
-    font-size: 1.5rem !important;
-    width: 100% !important;
-  }
-  
-  html body header nav {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-  
-  html body header nav a {
-    width: 100% !important;
-    text-align: center !important;
-    padding: 0.75rem !important;
-  }
-  
-  html body header select {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0.75rem !important;
-  }
-  
-  html body main {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-  }
-  
-  html body main > * {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  
-  html body main img {
-    max-height: 350px !important;
-    object-fit: cover !important;
-  }
-}
-
-/* MOBILE: 480px and below */
-@media screen and (max-width: 480px) {
-  html body header {
-    padding: 0.75rem !important;
-  }
-  
-  html body header h1 {
-    font-size: 1.2rem !important;
-  }
-  
-  html body header nav a {
-    font-size: 0.95rem !important;
-  }
-  
-  html body main {
-    padding: 0.75rem !important;
-  }
-  
-  html body main img {
-    max-height: 250px !important;
-  }
-}
-/* Responsive CSS - Keep this in your stylesheet */
-html body div#root { width: 100% !important; overflow-x: hidden !important; }
-html body header { display: flex !important; flex-wrap: wrap !important; padding: 1rem !important; gap: 0.5rem !important; width: 100% !important; box-sizing: border-box !important; }
-html body header h1 { font-size: clamp(1rem, 4vw, 2rem) !important; margin: 0 !important; }
-html body header nav { display: flex !important; gap: 0.5rem !important; flex-wrap: wrap !important; }
-html body header select { padding: 0.5rem !important; font-size: clamp(0.85rem, 2vw, 1rem) !important; max-width: 150px !important; }
-html body img { max-width: 100% !important; height: auto !important; }
-
-@media (max-width: 768px) {
-  html body header { flex-direction: column !important; }
-  html body header h1 { text-align: center !important; width: 100% !important; }
-  html body header nav { flex-direction: column !important; width: 100% !important; }
-  html body header nav a { width: 100% !important; text-align: center !important; padding: 0.75rem !important; }
-  html body header select { width: 100% !important; max-width: 100% !important; }
-  html body main { display: flex !important; flex-direction: column !important; }
-  html body main > * { width: 100% !important; }
 }

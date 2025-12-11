@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -7,6 +8,12 @@ import SEOHead from './components/SEOHead';
 import './App.css';
 
 function App() {
+  const { ready } = useTranslation();
+
+  if (!ready) {
+    return <div className="loading">Loading translations...</div>;
+  }
+
   return (
     <Suspense fallback={<div className="loading">Loading...</div>}>
       <Routes>

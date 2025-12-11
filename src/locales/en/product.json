@@ -1,0 +1,18 @@
+{
+  "title": "Skincare Products",
+  "cetaphil_cleanser": "Cetaphil Gentle Skin Cleanser",
+  "loreal_serum": "L'Oreal Paris Revitalift Serum",
+  "plum_moisturizer": "Plum Green Tea Moisturizer",
+  "cerave_sunscreen": "CeraVe Hydrating Sunscreen SPF 30",
+  "sheet_mask": "Vitamin C Sheet Mask",
+  "alcohol_free_toner": "Alcohol-Free Face Toner",
+  "laneige_eye_cream": "Laneige Eye Sleeping Mask",
+  "organic_face_oil": "Organic Natural Face Oil",
+  "walnut_face_scrub": "Walnut Face Scrub",
+  "vcare_facial_kit": "VCare Flower Bouquet Facial Kit",
+  "button_buy_now": "Buy Now",
+  "product_catalog_header": "Skincare Products",
+  "product": {
+    "buyNow": "Buy Now"
+  }
+}

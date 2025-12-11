@@ -1,5 +1,4 @@
 // src/pages/Home.js
-
 import React from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -16,7 +15,6 @@ const Home = () => {
   const sampleProductImage =
     "https://i.pinimg.com/1200x/7c/7f/c5/7c7fc5bc7f619200e227ea375b87cc59.jpg";
 
-  // Demo dates for localization
   const today = new Date();
   const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000);
 
@@ -26,8 +24,7 @@ const Home = () => {
         minHeight: "calc(100vh - 70px)",
         paddingBlock: "60px",
         paddingInline: "40px",
-        background:"#a7f3d0",
-         
+        background: "#a7f3d0",
         display: "flex",
         alignItems: "center",
         justifyContent: "center"
