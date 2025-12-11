@@ -67,72 +67,33 @@ The app will open at [http://localhost:3000](http://localhost:3000)
 
 ## 🏗️ Project Structure
 
+```bash
 global-spa-project/
 ├── public/
-│ ├── index.html
-│ ├── favicon.ico
-│ ├── manifest.json
-│ └── locales/ # Original translation files (not used in production)
-│ ├── en/
-│ │ ├── common.json
-│ │ └── product.json
-│ ├── es/
-│ ├── ar/
-│ └── ja/
-│
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
 ├── src/
-│ ├── components/
-│ │ ├── Header.js # Navigation header with language switcher
-│ │ ├── LanguageSwitcher.js # Language dropdown component
-│ │ ├── Layout.js # Main layout wrapper
-│ │ ├── ProductCard.js # Product display card
-│ │ └── SEOHead.js # Dynamic SEO meta tags
-│ │
-│ ├── hooks/
-│ │ └── useLocaleInfo.js # Custom hook for locale information
-│ │
-│ ├── locales/ # Translation files (bundled with app)
-│ │ ├── en/
-│ │ │ ├── common.json # English UI translations
-│ │ │ └── product.json # English product data
-│ │ ├── es/
-│ │ │ ├── common.json
-│ │ │ └── product.json
-│ │ ├── ar/
-│ │ │ ├── common.json
-│ │ │ └── product.json
-│ │ └── ja/
-│ │ ├── common.json
-│ │ └── product.json
-│ │
-│ ├── pages/
-│ │ ├── Home.js # Home page component
-│ │ └── Products.js # Products catalog page
-│ │
-│ ├── services/
-│ │ └── localeFormatter.js # Locale formatting utilities (dates, currency)
-│ │
-│ ├── App.js # Main app component with routing
-│ ├── App.css # Global app styles
-│ ├── i18n.js # i18next configuration
-│ ├── index.js # App entry point
-│ └── index.css # Global styles
-│
-├── Screenshorts/ # Application screenshots
-│ ├── en-home.png
-│ ├── en-products.png
-│ ├── es-home.png
-│ ├── ar-home.png
-│ ├── ar-products.png
-│ ├── ja-products.png
-│ ├── mobile-eng.png
-│ └── mobile-ar.png
-│
-├── Demo_video.mp4 # Demo video
-├── package.json # Dependencies and scripts
-├── package-lock.json
-└── README.md # Project documentation
-
+│   ├── components/
+│   │   ├── Header.js
+│   │   └── LanguageSwitcher.js
+│   ├── hooks/
+│   │   └── useLocaleInfo.js
+│   ├── locales/
+│   │   ├── en/
+│   │   │   ├── common.json
+│   │   │   └── product.json
+│   │   ├── es/
+│   │   ├── ar/
+│   │   └── ja/
+│   ├── pages/
+│   │   ├── Home.js
+│   │   └── Products.js
+│   ├── services/
+│   └── App.js
+├── package.json
+└── README.md
+```
 ## 🌐 Supported Languages
 
 | Language | Code | Direction | Locale |
