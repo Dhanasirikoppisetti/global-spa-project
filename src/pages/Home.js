@@ -26,8 +26,8 @@ const Home = () => {
         minHeight: "calc(100vh - 70px)",
         paddingBlock: "60px",
         paddingInline: "40px",
-        background:
-          "linear-gradient(135deg, #d1fae5 0%, #a7f3d0 40%, #6ee7b7 100%)",
+        background:"#a7f3d0",
+         
         display: "flex",
         alignItems: "center",
         justifyContent: "center"

@@ -93,7 +93,7 @@ const ProductsPage = () => {
         minHeight: "calc(100vh - 70px)",
         paddingBlock: "40px",
         paddingInline: "20px",
-        background: "linear-gradient(135deg, #d1fae5 0%, #a7f3d0 40%, #6ee7b7 100%)"
+        background: "#a7f3d0",
       }}
     >
       <h1
