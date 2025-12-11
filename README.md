@@ -9,6 +9,10 @@ A sophisticated, multi-language single-page application (SPA) built with React, 
 **🌐 Live demo link :** [http://localhost:3000](http://localhost:3000)
 **Deployed URL:** [https://dhanasirikoppisetti.github.io/global-spa-project/](https://dhanasirikoppisetti.github.io/global-spa-project/)
 
+## Demo Video
+
+👉 [Watch Demo Video](https://drive.google.com/file/d/1Pneb5D1cMxHP29RGOyMpjbtkX0POgxRQ/view?usp=sharing)
+
 ## ✨ Features
 
 ### Core Functionality
