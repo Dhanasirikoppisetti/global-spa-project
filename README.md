@@ -70,38 +70,68 @@ The app will open at [http://localhost:3000](http://localhost:3000)
 global-spa-project/
 ├── public/
 │ ├── index.html
+│ ├── favicon.ico
+│ ├── manifest.json
 │ └── locales/ # Original translation files (not used in production)
+│ ├── en/
+│ │ ├── common.json
+│ │ └── product.json
+│ ├── es/
+│ ├── ar/
+│ └── ja/
+│
 ├── src/
 │ ├── components/
-│ │ ├── Header.jsx # Navigation header with language switcher
-│ │ ├── Layout.jsx # Main layout wrapper
-│ │ └── SEOHead.jsx # Dynamic SEO meta tags
+│ │ ├── Header.js # Navigation header with language switcher
+│ │ ├── LanguageSwitcher.js # Language dropdown component
+│ │ ├── Layout.js # Main layout wrapper
+│ │ ├── ProductCard.js # Product display card
+│ │ └── SEOHead.js # Dynamic SEO meta tags
+│ │
 │ ├── hooks/
 │ │ └── useLocaleInfo.js # Custom hook for locale information
+│ │
 │ ├── locales/ # Translation files (bundled with app)
 │ │ ├── en/
-│ │ │ ├── common.json # English translations
-│ │ │ └── product.json
+│ │ │ ├── common.json # English UI translations
+│ │ │ └── product.json # English product data
 │ │ ├── es/
-│ │ │ ├── common.json # Spanish translations
+│ │ │ ├── common.json
 │ │ │ └── product.json
 │ │ ├── ar/
-│ │ │ ├── common.json # Arabic translations
+│ │ │ ├── common.json
 │ │ │ └── product.json
 │ │ └── ja/
-│ │ ├── common.json # Japanese translations
+│ │ ├── common.json
 │ │ └── product.json
+│ │
 │ ├── pages/
-│ │ ├── Home.jsx # Home page
-│ │ └── Products.jsx # Products catalog page
+│ │ ├── Home.js # Home page component
+│ │ └── Products.js # Products catalog page
+│ │
 │ ├── services/
-│ │ └── localeFormatter.js # Locale formatting utilities
+│ │ └── localeFormatter.js # Locale formatting utilities (dates, currency)
+│ │
 │ ├── App.js # Main app component with routing
+│ ├── App.css # Global app styles
 │ ├── i18n.js # i18next configuration
 │ ├── index.js # App entry point
 │ └── index.css # Global styles
-├── package.json
-└── README.md
+│
+├── Screenshorts/ # Application screenshots
+│ ├── en-home.png
+│ ├── en-products.png
+│ ├── es-home.png
+│ ├── ar-home.png
+│ ├── ar-products.png
+│ ├── ja-products.png
+│ ├── mobile-eng.png
+│ └── mobile-ar.png
+│
+├── Demo_video.mp4 # Demo video
+├── package.json # Dependencies and scripts
+├── package-lock.json
+└── README.md # Project documentation
 
 ## 🌐 Supported Languages
 
