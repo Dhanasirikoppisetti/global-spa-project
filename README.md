@@ -266,7 +266,7 @@ This project is licensed under the MIT License.
 ## 👤 Author
 
 **Your Name**
-- GitHub: [Dhanasiri](https://github.com/dhanasiri)
+- GitHub: [Dhana siri Koppisetti](https://github.com/dhanasiri)
 - Email: koppisettidhanasiri@gmail.com
 ## 🙏 Acknowledgments
 
