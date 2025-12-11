@@ -153,10 +153,10 @@ global-spa-project/
 
 ### Accessing Different Languages
 
-- **English**: `http://localhost:3000/en/home`
-- **Spanish**: `http://localhost:3000/es/home`
-- **Arabic**: `http://localhost:3000/ar/home`
-- **Japanese**: `http://localhost:3000/ja/home`
+- **English**: (http://localhost:3000/en/home)
+- **Spanish**: (http://localhost:3000/es/home)
+- **Arabic**: (http://localhost:3000/ar/home)
+- **Japanese**: (http://localhost:3000/ja/home)
 
 ### Language Switcher
 
