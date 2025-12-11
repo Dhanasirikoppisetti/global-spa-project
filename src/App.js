@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import SEOHead from './components/SEOHead';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<div className="loading">Loading...</div>}>
+      <Routes>
+        <Route path="/:locale" element={<Layout />}>
+          <Route path="home" element={
+            <>
+              <SEOHead 
+                title="Home - Blissful Beauty" 
+                description="Your daily glow starts here with natural, cruelty-free skincare products"
+              />
+              <Home />
+            </>
+          } />
+          <Route path="products" element={
+            <>
+              <SEOHead 
+                title="Products - Blissful Beauty" 
+                description="Explore our skincare product catalog with natural and organic options"
+              />
+              <Products />
+            </>
+          } />
+          <Route index element={<Navigate to="home" replace />} />
+        </Route>
+        <Route path="/" element={<Navigate to="/en/home" replace />} />
+        <Route path="*" element={<Navigate to="/en/home" replace />} />
+      </Routes>
+    </Suspense>
   );
 }
 
