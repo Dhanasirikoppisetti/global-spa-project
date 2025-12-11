@@ -30,7 +30,9 @@ const Home = () => {
         justifyContent: "center"
       }}
     >
+      {/* outer grid: hero-layout class for responsive CSS */}
       <div
+        className="hero-layout"
         style={{
           width: "100%",
           maxWidth: "1200px",
@@ -157,6 +159,7 @@ const Home = () => {
         {/* Visual side: floating card with image */}
         <div
           aria-hidden="true"
+          className="hero-image-card"
           style={{
             justifySelf: dir === "rtl" ? "start" : "end",
             width: "100%",

@@ -4,6 +4,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import "./Header.css";
 
 const Header = () => {
   const { t, i18n } = useTranslation("common");
@@ -15,19 +16,9 @@ const Header = () => {
   const isProducts = location.pathname.includes("/products");
 
   return (
-    <header
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        paddingBlock: "20px",
-        paddingInline: "40px",
-        backgroundColor: "#065f46",
-        boxShadow: "0 4px 12px rgba(6, 95, 70, 0.3)"
-      }}
-    >
+    <header className="app-header">
       {/* Brand with logo and elegant font */}
-      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+      <div className="app-header-brand">
         {/* Leaf Logo SVG */}
         <svg
           width="40"
@@ -58,63 +49,31 @@ const Header = () => {
           />
         </svg>
 
-        <h1
-          style={{
-            margin: 0,
-            fontSize: "2.2rem",
-            background: "linear-gradient(135deg, #6ee7b7 0%, #d1fae5 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-            fontWeight: 600,
-            fontFamily: "'Pacifico', 'Brush Script MT', cursive",
-            letterSpacing: "0.02em"
-          }}
-        >
+        <h1 className="app-header-title">
           {t("brandName", "Blissfull Beauty")}
         </h1>
       </div>
 
-      <div
-        className="button-group"
-        style={{ display: "flex", alignItems: "center", gap: "32px" }}
-      >
+      <div className="button-group app-header-buttons">
         <nav
           aria-label={t("nav.label", "Main navigation")}
-          style={{ display: "flex", gap: "8px" }}
+          className="app-header-nav"
         >
           <Link
             to={`/${currentLang}/home`}
-            style={{
-              textDecoration: "none",
-              color: "#ffffff",
-              fontWeight: isHome ? 600 : 500,
-              fontSize: "1.05rem",
-              paddingBlock: "8px",
-              paddingInline: "16px",
-              borderRadius: "8px",
-              backgroundColor: isHome ? "rgba(255,255,255,0.2)" : "transparent",
-              transition: "all 0.2s ease"
-            }}
+            className={
+              "app-header-link" + (isHome ? " app-header-link--active" : "")
+            }
           >
             {t("nav.home", "Home")}
           </Link>
 
           <Link
             to={`/${currentLang}/products`}
-            style={{
-              textDecoration: "none",
-              color: "#ffffff",
-              fontWeight: isProducts ? 600 : 500,
-              fontSize: "1.05rem",
-              paddingBlock: "8px",
-              paddingInline: "16px",
-              borderRadius: "8px",
-              backgroundColor: isProducts
-                ? "rgba(255,255,255,0.2)"
-                : "transparent",
-              transition: "all 0.2s ease"
-            }}
+            className={
+              "app-header-link" +
+              (isProducts ? " app-header-link--active" : "")
+            }
           >
             {t("nav.products", "Products")}
           </Link>

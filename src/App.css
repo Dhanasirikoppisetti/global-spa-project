@@ -137,7 +137,7 @@ code {
 }
 
 /* ===========================
-   HERO SECTION
+   HERO SECTION (current layout)
    =========================== */
 
 .hero-section {
@@ -243,58 +243,10 @@ code {
   align-items: center;
 }
 
-.hero-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  max-width: 450px;
+/* card wrapper used in Home.js */
+.hero-image-card {
   width: 100%;
-}
-
-.hero-card-badge {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #1f72b8 0%, #2980d6 100%);
-  color: white;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.hero-card-title {
-  font-size: 1.5rem;
-  color: white;
-  background: linear-gradient(135deg, #1f72b8 0%, #2980d6 100%);
-  padding: 0.8rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(31, 114, 184, 0.3);
-}
-
-.hero-card-image {
-  width: 100%;
-  height: clamp(220px, 55vw, 350px);
-  background: linear-gradient(135deg, #2980d6 0%, #3a8ee6 100%);
-  border-radius: 16px;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 4rem;
-  box-shadow: 0 6px 20px rgba(41, 128, 214, 0.3);
-}
-
-.hero-card-caption {
-  color: white;
-  background: linear-gradient(135deg, #1f72b8 0%, #2980d6 100%);
-  padding: 0.8rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  text-align: center;
-  font-weight: 500;
+  max-width: 400px;
 }
 
 /* ===========================
@@ -507,15 +459,21 @@ code {
     text-align: center;
   }
 
-  .hero-card {
-    padding: 1.5rem;
-  }
-
-  .hero-card-image {
-    height: 250px;
-  }
-
   .products-page {
     padding: 1.5rem 1rem;
+  }
+}
+
+/* Mobile tweaks for the Home.js hero layout and image card */
+@media screen and (max-width: 768px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-image-card {
+    justify-self: center;
+    max-width: 260px;
+    aspect-ratio: 3 / 4;
   }
 }

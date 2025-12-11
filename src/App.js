@@ -2,10 +2,10 @@ import React, { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Layout from './components/Layout';
-import Home from './pages/Home';
 import Products from './pages/Products';
 import SEOHead from './components/SEOHead';
 import './App.css';
+import Home from './pages/Home'
 
 function App() {
   const { ready } = useTranslation();
@@ -24,7 +24,7 @@ function App() {
                 title="Home - Blissful Beauty" 
                 description="Your daily glow starts here with natural, cruelty-free skincare products"
               />
-              <Home />
+             <Home/>
             </>
           } />
           <Route path="products" element={

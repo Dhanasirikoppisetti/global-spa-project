@@ -21,7 +21,7 @@
   "test": "react-scripts test",
   "eject": "react-scripts eject",
   "check-translations": "node scripts/check-translations.js",
-  "predeploy": "npm run build",
+  "predeploy": "npm run build && rm -f build/README.md",
   "deploy": "gh-pages -d build"
 },
 
