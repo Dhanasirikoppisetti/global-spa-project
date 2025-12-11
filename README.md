@@ -52,7 +52,6 @@ A sophisticated, multi-language single-page application (SPA) built with React, 
 git clone <https://github.com/Dhanasirikoppisetti/global-spa-project>
 cd global-spa-project
 
-text
 
 2. **Install dependencies:**
 npm install
@@ -62,7 +61,7 @@ text
 3. **Start the development server:**
 npm start
 
-text
+
 
 The app will open at [http://localhost:3000](http://localhost:3000)
 
@@ -103,8 +102,6 @@ global-spa-project/
 │ └── index.css # Global styles
 ├── package.json
 └── README.md
-
-text
 
 ## 🌐 Supported Languages
 
@@ -169,7 +166,7 @@ Add to package.json: "homepage": "https://dhanasirikoppisetti.github.io/global-s
 npm run build
 npm run deploy
 
-text
+
 
 ## 🔧 Configuration
 
@@ -192,7 +189,7 @@ common: newLangCommon,
 product: newLangProduct
 }
 
-text
+
 
 ### Modifying Translations
 
