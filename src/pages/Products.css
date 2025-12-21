@@ -63,3 +63,30 @@
     grid-template-columns: 1fr;
   }
 }
+/* RTL support for Arabic */
+[dir="rtl"] .products-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .products-title {
+  text-align: center;
+}
+
+/* Better mobile handling for RTL */
+@media (max-width: 768px) {
+  [dir="rtl"] .products-root {
+    padding-inline: 16px;
+  }
+  
+  [dir="rtl"] .products-grid {
+    direction: rtl;
+  }
+}
+
+@media (max-width: 480px) {
+  [dir="rtl"] .products-grid {
+    grid-template-columns: 1fr;
+    direction: rtl;
+  }
+}
+
