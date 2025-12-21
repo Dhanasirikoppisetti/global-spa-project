@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/global-spa-project/static/css/main.f92c5859.css",
-    "main.js": "/global-spa-project/static/js/main.5232db6f.js",
+    "main.css": "/global-spa-project/static/css/main.9748d091.css",
+    "main.js": "/global-spa-project/static/js/main.e2850bba.js",
     "index.html": "/global-spa-project/index.html",
-    "main.f92c5859.css.map": "/global-spa-project/static/css/main.f92c5859.css.map",
-    "main.5232db6f.js.map": "/global-spa-project/static/js/main.5232db6f.js.map"
+    "main.9748d091.css.map": "/global-spa-project/static/css/main.9748d091.css.map",
+    "main.e2850bba.js.map": "/global-spa-project/static/js/main.e2850bba.js.map"
   },
   "entrypoints": [
-    "static/css/main.f92c5859.css",
-    "static/js/main.5232db6f.js"
+    "static/css/main.9748d091.css",
+    "static/js/main.e2850bba.js"
   ]
 }
