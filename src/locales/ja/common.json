@@ -1,18 +1,20 @@
 {
   "title": "グローバル製品プラットフォーム",
   "brandName": "Blissfull Beauty",
-  "welcome_header": "グローバル体験",
-  "welcome_message": " 当社のグローバルサイト へようこそ！機能をご覧ください。",
-  "button_home": "ホーム",
-  "button_products": "製品",
+  "welcome_header": "グローバルな体験",
+  "welcome_message": "グローバルサイトへようこそ。さまざまな機能をお楽しみください。",
+  "home_header_skincare": "毎日のツヤはここから。",
+  "home_intro_text": "<strong>ナチュラルでクルエルティフリー</strong>なスキンケア製品を、あらゆる肌タイプ向けに取りそろえています。",
+  "button_view_all_products": "すべての製品を見る",
   "localization_header": "ローカライズされたデータ",
-  "last_updated": "最終更新日：",
-  "home_header_skincare": "あなたの毎日の輝きはここから始まります。",
-  "home_intro_text": "すべての肌タイプのために設計された、<strong>自然でクルエルティフリー</strong>なスキンケア製品のコレクションをご覧ください。",
-  "button_view_all_products": "全製品を見る",
+  "last_updated": "最終更新日:",
   "nav": {
     "label": "メインナビゲーション",
     "home": "ホーム",
     "products": "製品"
+  },
+  "language": {
+    "label": "言語を選択",
+    "ariaLabel": "言語セレクター"
   }
 }

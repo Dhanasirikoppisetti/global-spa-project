@@ -2,17 +2,19 @@
   "title": "Global Product Platform",
   "brandName": "Blissfull Beauty",
   "welcome_header": "Global Experience",
-  "welcome_message": "  Welcome to our global site! Explore our features.",
-  "button_home": "Home",
-  "button_products": "Products",
-  "localization_header": "Localized Data",
-  "last_updated": "Last Updated:",
+  "welcome_message": "Welcome to our global site! Explore our features.",
   "home_header_skincare": "Your Daily Glow Starts Here.",
   "home_intro_text": "Discover our collection of <strong>natural, cruelty-free</strong> skincare products designed for every skin type.",
   "button_view_all_products": "View All Products",
+  "localization_header": "Localized Data",
+  "last_updated": "Last Updated:",
   "nav": {
     "label": "Main navigation",
     "home": "Home",
     "products": "Products"
+  },
+  "language": {
+    "label": "Choose language",
+    "ariaLabel": "Language selector"
   }
 }

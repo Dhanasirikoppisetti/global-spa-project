@@ -1,13 +1,10 @@
-
 # 🌍 Blissful Beauty - Multi-Language Skincare SPA
 
 A sophisticated, multi-language single-page application (SPA) built with React, featuring comprehensive internationalization (i18n) and localization (l10n) support, including right-to-left (RTL) languages.
 
 ## 🚀 Live Demo
 
-
-**🌐 Live demo link :** [http://localhost:3000](http://localhost:3000)
-**Deployed URL:** [https://dhanasirikoppisetti.github.io/global-spa-project/](https://dhanasirikoppisetti.github.io/global-spa-project/)
+**Deployed URL:** https://dhanasirikoppisetti.github.io/global-spa-project/
 
 ## Demo Video
 
@@ -16,76 +13,76 @@ A sophisticated, multi-language single-page application (SPA) built with React, 
 ## ✨ Features
 
 ### Core Functionality
+
 - ✅ **Multi-Language Support**: English, Spanish, Arabic, and Japanese
-- ✅ **RTL Support**: Complete right-to-left layout adaptation for Arabic
+- ✅ **RTL Support**: Right-to-left layout adaptation for Arabic
 - ✅ **Language Switching**: Seamless language switching with dropdown menu
 - ✅ **Language Persistence**: Selected language saved in localStorage
 - ✅ **Auto-Detection**: Automatically detects browser language on first visit
 - ✅ **Locale-Based Routing**: URL structure includes locale (`/:locale/:page`)
 
 ### Localization Features
+
 - 📅 **Date Formatting**: Dates formatted according to user's locale
 - 🔢 **Number Formatting**: Currency and numbers with correct separators
 - ⏰ **Relative Time**: Dynamic relative time display (e.g., "2 hours ago")
 - 🌐 **Dynamic Content Translation**: All UI elements and product descriptions translated
 
 ### Technical Implementation
+
 - ⚡ **Performance Optimized**: Translations bundled with the app for fast loading
-- 🎨 **CSS Logical Properties**: Layout automatically adapts for LTR/RTL
+- 🎨 **CSS Logical Properties**: Layout uses logical properties so it adapts for LTR/RTL
 - 🔍 **SEO Optimized**: Dynamic `lang` and `dir` attributes, proper meta tags
 - ♿ **Accessible**: ARIA labels and semantic HTML
 - 📱 **Responsive Design**: Works seamlessly on all device sizes
 
 ## 🛠️ Tech Stack
 
-- **Framework**: React 18
-- **Routing**: React Router v6
+- **Framework**: React 19
+- **Routing**: React Router v7 with locale-based routes (`/:locale/:page`)
 - **Internationalization**: i18next, react-i18next
 - **Localization**: Intl API (native browser API)
 - **Language Detection**: i18next-browser-languagedetector
 - **SEO**: react-helmet-async
-- **Styling**: Inline CSS with CSS logical properties
+- **Styling**: Global/page-level CSS in `App.css` using CSS logical properties for LTR/RTL, avoiding heavy inline layout styles
 
 ## 📦 Installation
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - npm or yarn
 
 ### Setup Instructions
 
 1. **Clone the repository:**
-git clone <https://github.com/Dhanasirikoppisetti/global-spa-project>
+
+git clone https://github.com/Dhanasirikoppisetti/global-spa-project
 cd global-spa-project
 
+text
 
 2. **Install dependencies:**
+
 npm install
 
 text
 
 3. **Start the development server:**
+
 npm start
 
+text
 
-
-The app will open at [http://localhost:3000](http://localhost:3000)
+The app will open at `http://localhost:3000`.
 
 ## 🏗️ Project Structure
-
-```bash
+``` bash
 global-spa-project/
 ├── public/
 │ ├── index.html
 │ ├── favicon.ico
 │ ├── manifest.json
-│ └── locales/ # Original translation files (not used in production)
-│ ├── en/
-│ │ ├── common.json
-│ │ └── product.json
-│ ├── es/
-│ ├── ar/
-│ └── ja/
 │
 ├── src/
 │ ├── components/
@@ -140,6 +137,7 @@ global-spa-project/
 ├── package-lock.json
 └── README.md # Project documentation
 ```
+
 ## 🌐 Supported Languages
 
 | Language | Code | Direction | Locale |
@@ -153,57 +151,62 @@ global-spa-project/
 
 ### Accessing Different Languages
 
-- **English**: (http://localhost:3000/en/home)
-- **Spanish**: (http://localhost:3000/es/home)
-- **Arabic**: (http://localhost:3000/ar/home)
-- **Japanese**: (http://localhost:3000/ja/home)
+- **English**: `http://localhost:3000/en/home`
+- **Spanish**: `http://localhost:3000/es/home`
+- **Arabic**: `http://localhost:3000/ar/home`
+- **Japanese**: `http://localhost:3000/ja/home`
 
 ### Language Switcher
 
-Use the dropdown menu in the top-right corner to switch between languages. The selected language is persisted in localStorage and will be remembered on subsequent visits.
+Use the dropdown menu in the top-right corner to switch between languages. The selected language is persisted in `localStorage` and will be remembered on subsequent visits.
 
 ## 🧪 Testing
 
-Run tests (if configured)
+This project includes basic Jest tests focused on i18n configuration and RTL support.
+
+- Verify default language and supported locales (en, es, ar, ja)
+- Verify RTL configuration for Arabic
+
+Run tests:
+
 npm test
 
-Run tests in watch mode
-npm test -- --watch
 
-text
 
 ## 🏗️ Build for Production
 
-Create optimized production build
+Create optimized production build:
+
 npm run build
 
-The build folder will contain the production-ready files
-text
+
+
+The `build` folder will contain the production-ready files.
 
 ## 🚀 Deployment
 
-The app can be deployed to any static hosting service:
-
-### Deploy to Netlify
-npm run build
-
-Drag and drop the 'build' folder to Netlify
-text
-
-### Deploy to Vercel
-npm run build
-vercel --prod
-
-text
+The app can be deployed to any static hosting service.
 
 ### Deploy to GitHub Pages
+
 npm install gh-pages --save-dev
 
-Add to package.json: "homepage": "https://dhanasirikoppisetti.github.io/global-spa-project/"
+
+
+Add to `package.json`:
+
+"homepage": "https://dhanasirikoppisetti.github.io/global-spa-project/"
+
+
+
+Then:
+
 npm run build
 npm run deploy
 
 
+
+(You can also deploy the `build` folder to Netlify or Vercel if desired.)
 
 ## 🔧 Configuration
 
@@ -213,9 +216,10 @@ npm run deploy
    - Create `common.json` and `product.json`
 
 2. **Update `src/i18n.js`**:
+
 // Add imports
-import newLangCommon from './locales/newlang/common.json';
-import newLangProduct from './locales/newlang/product.json';
+import newLangCommon from "./locales/newlang/common.json";
+import newLangProduct from "./locales/newlang/product.json";
 
 // Add to LANGUAGES array
 { code: "newlang", locale: "xx-XX", dir: "ltr", name: "Language Name" }
@@ -231,13 +235,14 @@ product: newLangProduct
 ### Modifying Translations
 
 Edit the JSON files in `src/locales/[language-code]/`:
-- `common.json` - UI text, navigation, common elements
-- `product.json` - Product-specific content
+
+- `common.json` – UI text, navigation, common elements
+- `product.json` – Product-specific content
 
 ## 📊 Performance
 
-- ✅ Translations bundled with app (no HTTP requests)
-- ✅ Lazy loading with React.Suspense
+- ✅ Translations bundled with app (no extra HTTP requests for JSON)
+- ✅ React.Suspense used for smooth loading
 - ✅ Optimized re-renders with React hooks
 - ✅ Minimal bundle size with tree-shaking
 
@@ -269,15 +274,10 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-**Your Name**
-- GitHub: [Dhana siri Koppisetti](https://github.com/dhanasiri)
-- Email: koppisettidhanasiri@gmail.com
-## 🙏 Acknowledgments
+**Dhana Siri Koppisetti**
 
-- [React](https://reactjs.org/)
-- [i18next](https://www.i18next.com/)
-- [React Router](https://reactrouter.com/)
-- Product images from [Pinterest](https://pinterest.com)
+- GitHub: [Dhana siri Koppisetti](https://github.com/dhanasiri)
+- Email: [koppisettidhanasiri@gmail.com](mailto:koppisettidhanasiri@gmail.com)
 
 ---
 

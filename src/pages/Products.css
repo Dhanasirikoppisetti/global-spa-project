@@ -1,0 +1,65 @@
+/* src/pages/Products.css */
+
+.products-root {
+  padding-block: 40px 60px;
+  padding-inline: 60px;
+  background: linear-gradient(180deg, #a7f3d0 0%, #6ee7b7 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.products-header {
+  margin-block-end: 32px;
+  text-align: center;
+}
+
+.products-title {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #064e3b;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+}
+
+
+/* responsive breakpoints (optional) */
+@media (max-width: 1200px) {
+  .products-root {
+    padding-inline: 32px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .products-root {
+    padding-inline: 16px;
+  }
+  .products-title {
+    font-size: 1.8rem;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

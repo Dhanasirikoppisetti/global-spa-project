@@ -1,31 +1,31 @@
 // src/components/Header.js
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useLocaleInfo } from "../hooks/useLocaleInfo";
 import "./Header.css";
 
 const Header = () => {
-  const { t, i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
   const location = useLocation();
-
-  const currentLang = i18n.language || "en";
+  const { lang: currentLang } = useLocaleInfo();
 
   const isHome = location.pathname.includes("/home");
   const isProducts = location.pathname.includes("/products");
 
   return (
     <header className="app-header">
-      {/* Brand with logo and elegant font */}
+      {/* Brand */}
       <div className="app-header-brand">
-        {/* Leaf Logo SVG */}
         <svg
           width="40"
           height="40"
           viewBox="0 0 40 40"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
         >
           <path
             d="M20 5C15 5 10 8 8 15C6 22 8 28 12 32C14 34 16 35 18 35C16 30 15 25 16 20C17 15 19 10 20 5Z"
@@ -54,16 +54,18 @@ const Header = () => {
         </h1>
       </div>
 
-      <div className="button-group app-header-buttons">
+      <div className="app-header-buttons">
+        {/* Primary navigation */}
         <nav
-          aria-label={t("nav.label", "Main navigation")}
           className="app-header-nav"
+          aria-label={t("nav.label", "Main navigation")}
         >
           <Link
             to={`/${currentLang}/home`}
             className={
               "app-header-link" + (isHome ? " app-header-link--active" : "")
             }
+            aria-current={isHome ? "page" : undefined}
           >
             {t("nav.home", "Home")}
           </Link>
@@ -74,12 +76,23 @@ const Header = () => {
               "app-header-link" +
               (isProducts ? " app-header-link--active" : "")
             }
+            aria-current={isProducts ? "page" : undefined}
           >
             {t("nav.products", "Products")}
           </Link>
         </nav>
 
-        <LanguageSwitcher />
+        {/* Language selector */}
+        <div className="app-header-language">
+          <span className="app-header-language-label">
+            {t("language.label", "Choose language")}
+          </span>
+
+          <LanguageSwitcher
+            id="language-select"
+            aria-label={t("language.ariaLabel", "Language selector")}
+          />
+        </div>
       </div>
     </header>
   );

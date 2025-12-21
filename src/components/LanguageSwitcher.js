@@ -1,66 +1,41 @@
 // src/components/LanguageSwitcher.js
-
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { LANGUAGES, getLangMeta } from "../i18n";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { LANGUAGES } from "../i18n";
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ id }) => {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  const { langCode } = useParams();
+  const { lang: routeLang } = useParams();
 
-  const currentLang = langCode || i18n.language || "en";
+  const currentLang = routeLang || i18n.language || "en";
 
   const handleLanguageChange = (event) => {
     const newLang = event.target.value;
 
+    if (newLang === currentLang) return;
+
+    // Let i18n handle persistence + dir/lang updates
     i18n.changeLanguage(newLang);
 
-    const meta = getLangMeta(newLang);
-    document.documentElement.lang = meta.code;
-    document.documentElement.dir = meta.dir;
-    localStorage.setItem("lang", meta.code);
-
+    // Replace language segment in URL
     const segments = location.pathname.split("/");
-    if (segments[1]) {
-      segments[1] = newLang;
-    } else {
-      segments.splice(1, 0, newLang);
-    }
-    const newPath = segments.join("/");
-    navigate(newPath, { replace: true });
+    segments[1] = newLang;
+
+    navigate(segments.join("/"), { replace: true });
   };
 
   return (
     <select
-      onChange={handleLanguageChange}
+      id={id}
+      className="app-header-language-select"
       value={currentLang}
-      aria-label="Language Selector"
-      style={{
-        paddingBlock: "10px",
-        paddingInline: "16px",
-        border: "2px solid rgba(255,255,255,0.3)",
-        borderRadius: "10px",
-        backgroundColor: "rgba(255,255,255,0.15)",
-        color: "#ffffff",
-        fontSize: "0.95rem",
-        fontWeight: 600,
-        cursor: "pointer",
-        outline: "none",
-        transition: "all 0.2s ease"
-      }}
+      onChange={handleLanguageChange}
     >
       {LANGUAGES.map((lng) => (
-        <option 
-          key={lng.code} 
-          value={lng.code}
-          style={{
-            backgroundColor: "#065f46",
-            color: "#ffffff"
-          }}
-        >
+        <option key={lng.code} value={lng.code}>
           {lng.name}
         </option>
       ))}

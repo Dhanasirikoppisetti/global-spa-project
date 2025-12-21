@@ -1,22 +1,20 @@
 // src/i18n.js
-
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 // Import common translations
-import enCommon from './locales/en/common.json';
-import esCommon from './locales/es/common.json';
-import arCommon from './locales/ar/common.json';
-import jaCommon from './locales/ja/common.json';
+import enCommon from "./locales/en/common.json";
+import esCommon from "./locales/es/common.json";
+import arCommon from "./locales/ar/common.json";
+import jaCommon from "./locales/ja/common.json";
 
 // Import product translations
-import enProduct from './locales/en/product.json';
-import esProduct from './locales/es/product.json';
-import arProduct from './locales/ar/product.json';
-import jaProduct from './locales/ja/product.json';
+import enProduct from "./locales/en/product.json";
+import esProduct from "./locales/es/product.json";
+import arProduct from "./locales/ar/product.json";
+import jaProduct from "./locales/ja/product.json";
 
-// All supported languages
 export const LANGUAGES = [
   { code: "en", locale: "en-US", dir: "ltr", name: "English (EN)" },
   { code: "es", locale: "es-ES", dir: "ltr", name: "Español (ES)" },
@@ -28,19 +26,19 @@ export const getLangMeta = (code) =>
   LANGUAGES.find((l) => l.code === code) || LANGUAGES[0];
 
 const resources = {
-  en: { 
+  en: {
     common: enCommon,
     product: enProduct
   },
-  es: { 
+  es: {
     common: esCommon,
     product: esProduct
   },
-  ar: { 
+  ar: {
     common: arCommon,
     product: arProduct
   },
-  ja: { 
+  ja: {
     common: jaCommon,
     product: jaProduct
   }
@@ -53,8 +51,8 @@ i18n
     resources,
     supportedLngs: LANGUAGES.map((l) => l.code),
     fallbackLng: "en",
-    defaultNS: "common",
     ns: ["common", "product"],
+    defaultNS: "common",
     detection: {
       order: ["path", "localStorage", "navigator"],
       caches: ["localStorage"]

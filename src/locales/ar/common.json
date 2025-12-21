@@ -2,17 +2,19 @@
   "title": "منصة المنتجات العالمية",
   "brandName": "Blissfull Beauty",
   "welcome_header": "تجربة عالمية",
-  "welcome_message": "مرحباً بك في موقعنا العالمي استكشف ميزاتنا.",
-  "button_home": "الرئيسية",
-  "button_products": "المنتجات",
-  "localization_header": "البيانات المحلية",
-  "last_updated": "آخر تحديث:",
-  "home_header_skincare": "إشراقك اليومي يبدأ هنا.",
+  "welcome_message": "مرحبًا بك في موقعنا العالمي! استكشف مميزاتنا.",
+  "home_header_skincare": "يبدأ إشراقك اليومي من هنا.",
   "home_intro_text": "اكتشف مجموعتنا من منتجات العناية بالبشرة <strong>الطبيعية والخالية من القسوة</strong> المصممة لكل أنواع البشرة.",
   "button_view_all_products": "عرض جميع المنتجات",
+  "localization_header": "البيانات المحلية",
+  "last_updated": "آخر تحديث:",
   "nav": {
     "label": "التنقل الرئيسي",
     "home": "الرئيسية",
     "products": "المنتجات"
+  },
+  "language": {
+    "label": "اختر اللغة",
+    "ariaLabel": "مُحدد اللغة"
   }
 }
