@@ -132,7 +132,7 @@ global-spa-project/
 │ ├── mobile-eng.png
 │ └── mobile-ar.png
 │
-├── Demo_video.mp4 # Demo video
+|
 ├── package.json # Dependencies and scripts
 ├── package-lock.json
 └── README.md # Project documentation
