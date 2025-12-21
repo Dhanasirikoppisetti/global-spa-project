@@ -11,8 +11,8 @@ const ProductsPage = () => {
   const { locale, dir } = useLocaleInfo();
 
   return (
-    <section className="products-root" style={{ direction: dir }}>
-      <header className="products-header">
+      <section className="products-root">
+            <header className="products-header">
         <h1 className="products-title">
           {t("product_catalog_header")}
         </h1>
