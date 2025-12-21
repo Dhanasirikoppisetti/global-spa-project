@@ -133,6 +133,26 @@
   box-shadow: 0 0 0 2px #ecfeff;
   border-color: #a7f3d0;
 }
+
+/* Style the dropdown options with green background */
+.app-header-language-select option {
+  background-color: #065f46; /* dark green matching header */
+  color: #ffffff;
+  padding: 10px 16px;
+  font-weight: 500;
+}
+
+/* Hover state for options (limited browser support) */
+.app-header-language-select option:hover {
+  background-color: #047857; /* slightly lighter green */
+}
+
+/* Selected option styling */
+.app-header-language-select option:checked {
+  background-color: #059669; /* medium green */
+  font-weight: 600;
+}
+
 @media screen and (max-width: 768px) {
   .app-header-language {
     width: 100%;
